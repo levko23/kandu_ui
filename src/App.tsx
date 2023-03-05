@@ -1,13 +1,11 @@
-import React from 'react';
-import { Button } from '@progress/kendo-react-buttons';
-import kendoka from './kendoka.svg';
-import './App.scss';
+import kendoka from "./kendoka.svg";
+import "./App.scss";
+import BtnsComp from "./components/btn/Index";
+import GridComp from "./components/grid/Index";
+import CalenderComp from "./components/calender/Index";
+import DropDownListComp from "./components/dropDownList/Index";
 
 function App() {
-  const handleClick = React.useCallback(() => {
-    window.open('https://www.telerik.com/kendo-react-ui/components/', '_blank');
-  }, []);
-
   return (
     <div className="App">
       <header className="App-header">
@@ -15,14 +13,13 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <Button
-          themeColor={'primary'}
-          size={"large"}
-          onClick={handleClick}
-        >
-          Learn KendoReact
-        </Button>
+        <BtnsComp />
       </header>
+      <GridComp />
+      <hr />
+      <CalenderComp />
+      <hr />
+      <DropDownListComp />
     </div>
   );
 }
